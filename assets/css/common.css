@@ -21,3 +21,16 @@ input {
   outline: none;
 }
 li{list-style:none}
+.header{
+  height: 52px;
+  line-height: 52px;
+  padding:0px 32px;
+  overflow: hidden;
+  clear: both;
+}
+.header .left{
+  float: left;
+}
+.header .right{
+  float: right;
+}
