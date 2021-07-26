@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+  <meta http-equiv="expires" content="0">
+  <title>身份认证终端</title>
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+  <link rel="stylesheet" href="assets/css/print.css">
+  <script src="assets/js/angular-1.4.6.min.js"></script>
+  <script src="assets/js/angular-ui-router-0.4.3.min.js"></script>
+  <script src="assets/js/angular-idle-1.2.0.js"></script>
+  <script src="assets/js/angular-cookie-1.4.6.min.js"></script>
+  <script src="assets/js/jquery-1.12.0.js"></script>
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="assets/css/bootstrap-3.4.1.css">
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="assets/js/bootstrap-3.4.1.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/app.config.js"></script>
+  <script src="app/app.run.js"></script>
+  <script src="app/controller/login.js"></script>
+  <script src="app/controller/home.js"></script>
+  <script src="app/controller/jobList.js"></script>
+  <script src="app/controller/copyJob.js"></script>
+  <script src="app/controller/printJob.js"></script>
+  <script src="app/controller/setting.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="appCtrl">
+<div>
+    <div ui-view=""></div>
+</div>
+</body>
+</html>

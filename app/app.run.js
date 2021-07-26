@@ -1,0 +1,2 @@
+myApp.run(function ($rootScope) {
+});
