@@ -1,5 +1,6 @@
 myApp.controller(
   'homeCtrl',
-  function ($scope) {
+  function ($scope, $rootScope) {
+    $scope.currentUser = { username: 'xuejiao'}
   }
 );
