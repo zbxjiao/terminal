@@ -1,6 +1,6 @@
 myApp.config(function ($stateProvider, $urlRouterProvider) {
   // 默认路由
-  $urlRouterProvider.when("", "/home");
+  $urlRouterProvider.when("", "/login");
   $stateProvider
     .state("login", {
       url: "/login",

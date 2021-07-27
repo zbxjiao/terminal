@@ -11,10 +11,13 @@ myApp.directive('myHeader',function () {
       user: '=info'
     },
     transclude: true,
-    controller: function($scope){
+    controller: function($scope,){
       /*登录退出*/
       $scope.handleExit = function () {
         console.log('退出')
+      }
+      $scope.handleBack = function () {
+        history.back();
       }
     },
     templateUrl: 'app/view/components/my-header.html'
