@@ -1,7 +1,8 @@
 var myApp = angular.module('myApp', [
   'ui.router',
 ]);
-myApp.controller('appCtrl', function ($scope) {
+myApp.controller('appCtrl', function ($scope,$rootScope) {
+  $rootScope.currentUser = {username: 'xuejiao'}
 })
 myApp.directive('myHeader',function () {
   return {
@@ -13,7 +14,7 @@ myApp.directive('myHeader',function () {
     controller: function($scope){
       /*登录退出*/
       $scope.handleExit = function () {
-        cnosole.log('退出')
+        console.log('退出')
       }
     },
     templateUrl: 'app/view/components/my-header.html'
@@ -30,5 +31,21 @@ myApp.directive('myDialog', function () {
     controller: function () {
     },
     templateUrl: 'app/view/components/my-dialog.html'
+  }
+})
+
+myApp.directive('myPage', function () {
+  return {
+    redirect: 'E',
+    scope: {
+      page: '=info',
+      first: '&onFirst',
+      last: '&onLast',
+      before: '&onBefore',
+      next: '&onNext',
+    },
+    controller: function () {
+    },
+    templateUrl: 'app/view/components/my-page.html'
   }
 })

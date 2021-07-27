@@ -1,0 +1,121 @@
+.container{
+    background: #ffffff;
+    border-radius: 8px;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    bottom: 80px;
+    right: 30px;
+}
+.list{
+    padding: 0px 21px;
+}
+.list ul.rowList{
+    width: 100%;
+    height: 56px;
+    border-bottom: 1px solid #E8E8E8;
+}
+.list ul.rowList li{
+    display: inline-block;
+    float: left;
+    height: 56px;
+    line-height: 56px;
+    width:160px;
+    font-size: 18px;
+    color: #1C2241;
+}
+.list ul.rowList li:first-child{
+    width:62px;
+    position: relative;
+}
+.list ul.rowList li:nth-child(3){
+    width:200px;
+}
+.list ul.rowList li:last-child{
+    width:62px;
+    position: absolute;
+    right: 10px;
+}
+.list ul.rowList li img{
+    vertical-align: middle;
+}
+.list ul.rowList li.error{
+    background: #FF0000;
+}
+/*checkbox 切换 start*/
+.toggle{
+    text-align: center;
+    vertical-align: top;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+.toggle::before{
+    width:23px;
+}
+.toggle::after{
+    /*content: url('../images/noActive.png');*/
+    content: '';
+    background: url("../images/page/noActive@2x.png") no-repeat;
+    background-size: contain;
+    width:18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top:-9px;
+    margin-left:-9px;
+}
+.toggle:checked::after{
+    content: '';
+    background: url("../images/page/yesActive@2x.png") no-repeat;
+    background-size: contain;
+    width:18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top:-9px;
+    margin-left:-9px;
+}
+/*checkbox 切换 end*/
+p.btnGroup{
+    position: absolute;
+    margin: 25px auto;
+    display: inline-block;
+    bottom: 0px;
+    left: 25px;
+    right: 25px;
+}
+p.btnGroup label{
+    width:95px;
+    height: 41px;
+    line-height: 41px;
+    border-radius: 20px;
+    display: inline-block;
+    color: #ffffff;
+    float: left;
+}
+p.btnGroup span{
+    float: right;
+}
+p.btnGroup span label:first-child{
+    margin-right: 20px;
+}
+p.btnGroup label img{
+    width:16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+p.btnGroup label.deleteBtn{
+    background: #5877E6;
+}
+p.btnGroup label.refreshBtn{
+    background: #1FB3B2;
+}
+p.btnGroup label.printBtn{
+    background: #F7B247;
+}

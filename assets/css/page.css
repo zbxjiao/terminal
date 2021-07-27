@@ -1,0 +1,36 @@
+.page{
+    width:100%;
+    height: 28px;
+    margin-top:12px;
+}
+.page ul{
+    display: inline-block;
+}
+.page ul li{
+    display: inline-block;
+    float: left;
+}
+.page ul li{
+    width: 69px;
+    height: 28px;
+    line-height: 28px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    font-size: 16px;
+}
+.page ul li:not(:nth-child(3)){
+    border: 1px solid #323C6D;
+}
+.page ul li img.small{
+    width:12px;
+    height: 13px;
+}
+.page ul li img{
+    width:14px;
+    height: 14px;
+    vertical-align: middle;
+    margin-right:2px;
+}
+.page ul li:not(:last-child){
+    margin-right: 8px;
+}

@@ -41,25 +41,31 @@
     margin: 0px 10px;
 }
 /*黑色按钮样式*/
-.blackBtn{
+.d_bottom .blackBtn{
     background: #282F50;
     color: #fff;
 }
 /*白色按钮样式*/
-.whiteBtn{
+.d_bottom .whiteBtn{
     color:#000000;
 }
 /*扫描按钮样式*/
-.scanBtn{
+.d_bottom .scanBtn{
     background: #55B9F1;
+    border: 1px solid #55B9F1;
+    color: #ffffff;
 }
 /*复印按钮样式*/
-.printBtn{
+.d_bottom .printBtn{
     background: #5877E6;
+    border: 1px solid #5877E6;
+    color: #ffffff;
 }
 /*删除按钮*/
-.deleteBtn{
+.d_bottom .deleteBtn{
     background: #FE2D69;
+    border: 1px solid #FE2D69;
+    color: #ffffff;
 }
 .d_bottom{
     height: 50px;
