@@ -9,6 +9,26 @@ myApp.directive('myHeader',function () {
     scope: {
       user: '=info'
     },
+    transclude: true,
+    controller: function($scope){
+      /*登录退出*/
+      $scope.handleExit = function () {
+        cnosole.log('退出')
+      }
+    },
     templateUrl: 'app/view/components/my-header.html'
+  }
+})
+
+myApp.directive('myDialog', function () {
+  return {
+    redirect: 'E',
+    scope: {
+      dialogInfo: '=info',
+    },
+    transclude: true,
+    controller: function () {
+    },
+    templateUrl: 'app/view/components/my-dialog.html'
   }
 })

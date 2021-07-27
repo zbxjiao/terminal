@@ -1,5 +1,5 @@
 <div ng-controller="homeCtrl">
-  <my-header info="{username: '李勇'}"></my-header>
+  <my-header info="currentUser">插入的内容</my-header>
   <div class="main">
     <div class="home-container">
       <div class="hunk">
@@ -16,4 +16,7 @@
       </div>
     </div>
   </div>
+  <my-dialog ng-hide="dialogIsHidden" info="dialogInfo" on-close="hideDialog()">
+    <span class="d_btn blackBtn" ng-click="close()">确定</span>
+  </my-dialog>
 </div>
