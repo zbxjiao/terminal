@@ -42,6 +42,9 @@
 .list ul.rowList li.error{
     background: #FF0000;
 }
+.list div.empty img{
+    margin-top: 50px;
+}
 /*checkbox 切换 start*/
 .toggle{
     text-align: center;

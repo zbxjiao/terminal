@@ -2,24 +2,29 @@
   <my-header info="currentUser"></my-header>
   <div class="main">
     <div class="container list">
-      <ul class="rowList" ng-repeat="item in list">
-        <li>
-          <input id={{item.id}} type="checkbox"
+      <div ng-if="list.length > 0">
+        <ul class="rowList" ng-repeat="item in list">
+          <li>
+            <input id={{item.id}} type="checkbox"
                    class="toggle"
-                 ng-model="item.isActive"
-                 ng-click="choose(item, $index)"
-                 ng-true-value="1"
-                 ng-false-value="0">
-        </li>
-        <li>{{item.fileName}}</li>
-        <li>{{item.numberOfCopiesT}}份 / {{item.numberOfPages}}页 / {{item.colorMode ? '彩色' : '黑白'}}/{{!item.singleAndDoubleSides ? '单面' : '双面'}}</li>
-        <li>{{item.createTime}}</li>
-        <li>
-          <img src="./assets/images/edit@2x.png"/>
-        </li>
-      </ul>
-      <my-page info="pageInfo"
-               on-first="first()" on-before="before()" on-next="next()" on-last="last()"></my-page>
+                   ng-model="item.isActive"
+                   ng-click="choose(item, $index)"
+                   ng-true-value="1"
+                   ng-false-value="0">
+          </li>
+          <li>{{item.fileName}}</li>
+          <li>{{item.numberOfCopiesT}}份 / {{item.numberOfPages}}页 / {{item.colorMode ? '彩色' : '黑白'}}/{{!item.singleAndDoubleSides ? '单面' : '双面'}}</li>
+          <li>{{item.createTime}}</li>
+          <li>
+            <img src="./assets/images/edit@2x.png"/>
+          </li>
+        </ul>
+        <my-page info="pageInfo"
+                 on-first="first()" on-before="before()" on-next="next()" on-last="last()"></my-page>
+      </div>
+      <div ng-if="list.length === 0" class="empty">
+        <img src="./assets/images/empty@2x.png" alt="">
+      </div>
     </div>
     <p class="btnGroup">
       <label class="deleteBtn" ng-click="moreDel()"><img src="./assets/images/delete@2x.png" alt="">删除</label>
