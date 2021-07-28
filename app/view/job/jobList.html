@@ -2,20 +2,17 @@
   <my-header info="currentUser"></my-header>
   <div class="main">
     <div class="container list">
+      <input type="text" ng-model="gaodu">
       <div ng-if="list.length > 0">
-        <ul class="rowList" ng-repeat="item in list" ng-click="choose(item, $index)">
+        <ul class="rowList" ng-repeat="item in list" ng-click="choose(item)">
           <li>
-            <input id={{item.id}} type="checkbox"
-                   class="toggle"
-                   ng-model="item.isActive"
-                   ng-click="choose(item, $index)"
-                   ng-true-value="1"
-                   ng-false-value="0">
+            <img src="./assets/images/page/yesActive@2x.png" alt="" ng-if="item.isTest">
+            <img src="./assets/images/page/noActive@2x.png" alt="" ng-if="!item.isTest">
           </li>
           <li>{{item.fileName}}</li>
           <li>{{item.numberOfCopiesT}}份 / {{item.numberOfPages}}页 / {{item.colorMode ? '彩色' : '黑白'}}/{{!item.singleAndDoubleSides ? '单面' : '双面'}}</li>
           <li>{{item.createTime}}</li>
-          <li>
+          <li ng-click="editDialog(item); $event.stopPropagation();">
             <img src="./assets/images/edit@2x.png"/>
           </li>
         </ul>

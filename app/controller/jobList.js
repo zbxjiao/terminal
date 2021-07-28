@@ -46,13 +46,17 @@ myApp.controller(
       }
     ]
     $scope.numberIndex = 1
+    $scope.list.forEach(item => {
+      item.isTest = 0;
+    })
     /**
      * 复选框
      * @param item
      * @param index
      */
-    $scope.choose = function (item, index) {
-      if (item.isActive === 1) {
+    $scope.choose = function (item) {
+      item.isTest = !item.isTest
+      if (item.isTest) {
         //选中
         var flag = $scope.checkedList.some(function (v) {
           return v.id === item.id;
@@ -67,7 +71,8 @@ myApp.controller(
           }
         }
       }
-    };
+      console.log($scope.checkedList)
+    }
     $scope.first = function () {
       $scope.pageInfo.pageIndex = 1
     }
@@ -97,13 +102,13 @@ myApp.controller(
     $scope.handleEdit = function () {
       console.log('编辑',$scope.editObj)
       $scope.editObj.numberOfPages = $scope.numberIndex
+      $scope.editDialogIsHidden = true
     }
     $scope.editDialog = function (item) {
       $scope.editDialogIsHidden = false
       $scope.editObj = item
     }
     $scope.addNumber = function () {
-      console.log('添加')
       $scope.numberIndex++;
     }
     $scope.minusNumber = function () {

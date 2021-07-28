@@ -1,9 +1,9 @@
 <div class="header">
   <div class="header_container">
     <div class="left back" ng-click="handleBack()"><img src="./assets/images/back@2x.png"/></div>
-    <div class="right">
+    <div class="right" ng-click="handleExitDialog()">
       <span class="userInfo">欢迎{{user.username}}</span>
-      <img src="./assets/images/exit@2x.png" ng-click="handleExitDialog()"/>
+      <img src="./assets/images/exit@2x.png"/>
       <div ng-transclude></div>
     </div>
   </div>

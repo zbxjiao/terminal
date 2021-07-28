@@ -68,8 +68,8 @@
 }
 /*删除按钮*/
 .d_bottom .deleteBtn{
-    background: #FE2D69;
-    border: 1px solid #FE2D69;
+    background: red;
+    border: 1px solid red;
     color: #ffffff;
 }
 .d_bottom{
