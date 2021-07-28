@@ -3,8 +3,12 @@
     <div class="left back" ng-click="handleBack()"><img src="./assets/images/back@2x.png"/></div>
     <div class="right">
       <span class="userInfo">欢迎{{user.username}}</span>
-      <img src="./assets/images/exit@2x.png" ng-click="handleExit()"/>
+      <img src="./assets/images/exit@2x.png" ng-click="handleExitDialog()"/>
       <div ng-transclude></div>
     </div>
   </div>
 </div>
+<my-dialog ng-hide="dialogIsHidden" info="dialogInfo">
+  <span class="d_btn whiteBtn" ng-click="close()">取消</span>
+  <span class="d_btn blackBtn" ng-click="handleEdit()">退出</span>
+</my-dialog>

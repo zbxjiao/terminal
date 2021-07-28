@@ -11,11 +11,22 @@ myApp.directive('myHeader',function () {
       user: '=info'
     },
     transclude: true,
-    controller: function($scope,){
+    controller: function($scope, $state){
+      $scope.dialogIsHidden = true
+      $scope.dialogInfo = {text: 'ddd'}
       /*登录退出*/
-      $scope.handleExit = function () {
-        console.log('退出')
+      $scope.handleExitDialog = function () {
+        $scope.dialogIsHidden = false
       }
+      /*取消*/
+      $scope.close = function () {
+        $scope.dialogIsHidden = true;
+      }
+      /*退出*/
+      $scope.handleEdit = function () {
+        $state.go('login')
+      }
+      /*回退*/
       $scope.handleBack = function () {
         history.back();
       }
