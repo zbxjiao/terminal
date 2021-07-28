@@ -85,32 +85,54 @@ myApp.controller(
     $scope.next = function () {
       $scope.pageInfo.pageIndex = $scope.pageInfo.pageIndex + 1 > $scope.pageInfo.pageSize ? $scope.pageInfo.pageSize : $scope.pageInfo.pageIndex + 1
     }
+    /**
+     * 批量删除
+     */
     $scope.moreDel = function () {
       if ($scope.checkedList.length > 0) {
         $scope.dialogIsHidden = false
         $scope.dialogInfo = {text: '确认删除当前勾选作业？'}
       }
     }
+    /**
+     * dialog关闭
+     */
     $scope.close = function () {
       $scope.dialogIsHidden = true
       $scope.editDialogIsHidden = true
     }
+    /**
+     * 删除确认
+     */
     $scope.handleJobDelete = function () {
       console.log('删除作业')
       $scope.dialogIsHidden = true
     }
+    /**
+     * 编辑确认
+     */
     $scope.handleEdit = function () {
       console.log('编辑',$scope.editObj)
       $scope.editObj.numberOfPages = $scope.numberIndex
       $scope.editDialogIsHidden = true
     }
+    /**
+     * 编辑
+     * @param item
+     */
     $scope.editDialog = function (item) {
       $scope.editDialogIsHidden = false
       $scope.editObj = item
     }
+    /**
+     * add 份数
+     */
     $scope.addNumber = function () {
       $scope.numberIndex++;
     }
+    /**
+     * minus 份数
+     */
     $scope.minusNumber = function () {
       $scope.numberIndex = $scope.numberIndex - 1 < 1 ? 1 : $scope.numberIndex - 1;
     }
