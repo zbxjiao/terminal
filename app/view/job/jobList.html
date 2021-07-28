@@ -3,7 +3,7 @@
   <div class="main">
     <div class="container list">
       <div ng-if="list.length > 0">
-        <ul class="rowList" ng-repeat="item in list">
+        <ul class="rowList" ng-repeat="item in list" ng-click="choose(item, $index)">
           <li>
             <input id={{item.id}} type="checkbox"
                    class="toggle"
@@ -16,7 +16,7 @@
           <li>{{item.numberOfCopiesT}}份 / {{item.numberOfPages}}页 / {{item.colorMode ? '彩色' : '黑白'}}/{{!item.singleAndDoubleSides ? '单面' : '双面'}}</li>
           <li>{{item.createTime}}</li>
           <li>
-            <img src="./assets/images/edit@2x.png" ng-click="editDialog(item)"/>
+            <img src="./assets/images/edit@2x.png"/>
           </li>
         </ul>
         <my-page info="pageInfo"

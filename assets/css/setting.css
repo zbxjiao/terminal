@@ -1,0 +1,166 @@
+.setting-container {
+    width: 741px;
+    height: 338px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 52px;
+    position: relative;
+}
+
+.setting-header {
+    width: 100%;
+    height: 38px;
+}
+
+.setting-header .header-line {
+    width: 4px;
+    height: 18px;
+    background-color: #1C2241;
+    margin: 20px 0 0 35px;
+    float: left;
+}
+
+.setting-header .header-title {
+    width: 90px;
+    height: 18px;
+    font-size: 18px;
+    font-family: SourceHanSansCN-Medium, SourceHanSansCN;
+    font-weight: 500;
+    color: #1C2241;
+    line-height: 18px;
+    margin: 20px 0 0 6px;
+    float: left;
+}
+
+.setting-main {
+    margin-top: 13px;
+    padding-left: 138px;
+}
+
+.setting-main .item {
+    height: 38px;
+    line-height: 38px;
+    margin-bottom: 28px;
+}
+
+.setting-main .item-left {
+    width: 100px;
+    height: 38px;
+    font-size: 18px;
+    font-family: SourceHanSansCN-Normal, SourceHanSansCN;
+    font-weight: 400;
+    color: #1C2241;
+    margin-right: 8px;
+    float: left;
+}
+
+.setting-main .item-right {
+    float: left;
+}
+
+.setting-main .item-right2 {
+    width: 116px;
+    height: 38px;
+    float: left;
+    position: relative;
+}
+
+.setting-main .item-input {
+    width: 370px;
+    height: 36px;
+    border: 1px solid #1C2241;
+    border-radius: 4px;
+    padding-left: 18px;
+}
+
+.setting-main .item-input2 {
+    width: 116px;
+    height: 36px;
+    border: 1px solid #1C2241;
+    border-radius: 4px;
+    padding-left: 18px;
+}
+
+.setting-main .item-icon {
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 10px;
+    height: 18px;
+}
+
+.setting-footer {
+    width: 210px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    bottom: -65px;
+}
+
+.setting-footer .footer-btn {
+    width: 95px;
+    height: 33px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 17px;
+    float: left;
+    font-size: 18px;
+    font-family: 'SourceHanSansCN-Medium, SourceHanSansCN';
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 33px;
+    cursor: pointer;
+}
+
+.setting-footer .btn-icon {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 7px 0 0 15px;
+}
+
+.setting-footer .btn1 {
+    background: #1FB3B2;
+    margin-right: 20px;
+    /* margin-left: 5px; */
+}
+
+.setting-footer .btn2 {
+    background: #5877E6
+}
+
+.setting-container input::-webkit-input-placeholder {
+    /* WebKit browsers */
+    font-size: 18px;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    color: #838BB1;
+    line-height: 38px
+}
+
+.setting-container input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    font-size: 18px;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    color: #838BB1;
+    line-height: 38px
+}
+
+.setting-container input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    font-size: 18px;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    color: #838BB1;
+    line-height: 38px
+}
+
+.setting-container input:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    font-size: 18px;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    color: #838BB1;
+    line-height: 38px
+}

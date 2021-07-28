@@ -1,2 +1,1 @@
-myApp.controller('settingCtrl', function ($rootScope, $scope) {
-});
+myApp.controller('settingCtrl', function($rootScope, $scope) {});

@@ -1,0 +1,298 @@
+.login {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.login-container {
+    width: 568px;
+    height: 317px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    margin: 0 auto;
+    margin-top: 68px;
+}
+
+.login-title {
+    padding-top: 31px;
+    font-size: 24px;
+    font-family: SourceHanSansCN-Bold, SourceHanSansCN;
+    font-weight: bold;
+    color: #1C2240;
+    line-height: 24px;
+    height: 24px;
+}
+
+.login-left {
+    width: 335px;
+    height: 262px;
+    /* background-color: pink; */
+    float: left;
+    position: relative;
+}
+
+.login-left-img {
+    width: 335px;
+    height: 205px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.login-right {
+    width: 143px;
+    padding: 15px 44px;
+    /* background-color: yellow; */
+    float: left;
+}
+
+.error {
+    font-size: 12px;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    color: #CC2323;
+    line-height: 18px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+.input-box {
+    width: 143px;
+    height: 22px;
+    border-bottom: 1px solid #838BB1;
+    margin-bottom: 26px;
+}
+
+.input-icon1 {
+    width: 18px;
+    height: 20px;
+    float: left;
+}
+
+.input-icon2 {
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+
+.input-icon3 {
+    width: 18px;
+    height: 18px;
+    float: left;
+}
+
+.input-class {
+    float: right;
+    width: 116px;
+    padding-left: 7px;
+    height: 20px;
+}
+
+.input-font {
+    font-size: 12px;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    color: #838BB1;
+    line-height: 18px;
+}
+
+.input-class2 {
+    float: left;
+    width: 99px;
+    padding-left: 7px;
+    height: 20px;
+}
+
+.eyes-icon {
+    width: 16px;
+    height: 16px;
+    float: left;
+}
+
+.btn-box {
+    margin-top: 15px;
+    width: 116px;
+    height: 27px;
+    background: #1F2645;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: SourceHanSansCN-Medium, SourceHanSansCN;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 27px;
+    margin-left: 14px;
+    cursor: pointer;
+}
+
+
+/* 刷卡 */
+
+.slot-card-title {
+    font-size: 14px;
+    font-family: SourceHanSansCN-Medium, SourceHanSansCN;
+    font-weight: bold;
+    color: #1C2240;
+    line-height: 21px
+}
+
+.slot-card-img {
+    margin-top: 18px;
+    width: 146px;
+    height: 116px;
+    margin-bottom: 26px;
+}
+
+.login-btn-box {
+    /* width: 144px; */
+    height: 27px;
+    background: #1F2645;
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+.login-btn-box-arrow {
+    float: left;
+    width: 16px;
+    height: 15px;
+    margin-right: 6px;
+    margin-left: 17px;
+    margin-top: 5px;
+}
+
+.login-btn-box-font {
+    float: left;
+    font-size: 14px;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 27px;
+}
+
+.login-input1 {
+    margin-top: 18px;
+}
+
+.login-input2 {
+    margin-bottom: 50px;
+}
+
+.login-enter {
+    width: 28px;
+    height: 28px;
+    float: left;
+    margin-top: -10px;
+}
+
+.input-class3 {
+    float: left;
+    width: 85px;
+    padding-left: 7px;
+    height: 20px;
+}
+
+.login-container input::-webkit-input-placeholder {
+    /* WebKit browsers */
+    font-size: 12px;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    color: #838BB1;
+    line-height: 18px
+}
+
+.login-container input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    font-size: 12px;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    color: #838BB1;
+    line-height: 18px
+}
+
+.login-container input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    font-size: 12px;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    color: #838BB1;
+    line-height: 18px
+}
+
+.login-container input:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    font-size: 12px;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    color: #838BB1;
+    line-height: 18px
+}
+
+
+/* 绑卡 */
+
+.tips-success-box {
+    width: 154px;
+    float: left;
+    margin-left: 32px;
+    font-size: 22px;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    color: #3D5A89;
+    line-height: 36px;
+    margin-top: 45px;
+}
+
+.tips-box {
+    width: 198px;
+    float: left;
+    margin-top: 42px;
+}
+
+.tips-box-span {
+    font-size: 22px;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    color: #3D5A89;
+    line-height: 36px;
+}
+
+.tips-box-btn-box {
+    width: 198px;
+    height: 34px;
+    margin-top: 48px;
+}
+
+.btn-binding {
+    width: 83px;
+    height: 27px;
+    background: #1F2645;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: SourceHanSansCN-Medium, SourceHanSansCN;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 27px;
+    margin-right: 12px;
+    float: left;
+    cursor: pointer;
+}
+
+.go-back {
+    width: 83px;
+    cursor: pointer;
+    height: 25px;
+    background: #fff;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: SourceHanSansCN-Medium, SourceHanSansCN;
+    font-weight: 500;
+    color: #1F2645;
+    line-height: 25px;
+    float: left;
+    background: #FFFFFF;
+    border: 1px solid #253369;
+}

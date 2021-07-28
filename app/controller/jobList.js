@@ -43,15 +43,6 @@ myApp.controller(
         colorMode: '0', //0-黑白（灰度）1-彩色
         singleAndDoubleSides: '0', //0-单面、1-双面长边翻转、2-双面短边翻转
         createTime: '09/25 15:01:35'
-      },
-      {
-        id: '5',
-        fileName: '作业名称.pdf',
-        numberOfCopiesT: '1', //份
-        numberOfPages: '5',//页
-        colorMode: '0', //0-黑白（灰度）1-彩色
-        singleAndDoubleSides: '0', //0-单面、1-双面长边翻转、2-双面短边翻转
-        createTime: '09/25 15:01:35'
       }
     ]
     $scope.numberIndex = 1
@@ -105,6 +96,7 @@ myApp.controller(
     }
     $scope.handleEdit = function () {
       console.log('编辑',$scope.editObj)
+      $scope.editObj.numberOfPages = $scope.numberIndex
     }
     $scope.editDialog = function (item) {
       $scope.editDialogIsHidden = false

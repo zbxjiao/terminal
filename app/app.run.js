@@ -1,5 +1,3 @@
 myApp.run(function ($rootScope) {
-  $rootScope.user = {
-    username: 'xuejiao'
-  }
+  $rootScope.currentUser = {username: 'lanxum'}
 });

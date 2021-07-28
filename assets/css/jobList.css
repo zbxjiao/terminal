@@ -45,6 +45,17 @@
 .list div.empty img{
     margin-top: 50px;
 }
+.list ul input[type='checkbox']{
+    width:40px;
+    height: 43px;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
 /*checkbox 切换 start*/
 .toggle{
     text-align: center;
@@ -62,26 +73,30 @@
     /*content: url('../images/noActive.png');*/
     content: '';
     background: url("../images/page/noActive@2x.png") no-repeat;
+    background-position-y: center;
     background-size: contain;
     width:18px;
     height: 18px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top:-9px;
-    margin-left:-9px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
 }
 .toggle:checked::after{
     content: '';
     background: url("../images/page/yesActive@2x.png") no-repeat;
+    background-position-y: center;
     background-size: contain;
     width:18px;
     height: 18px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top:-9px;
-    margin-left:-9px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
 }
 /*checkbox 切换 end*/
 p.btnGroup{

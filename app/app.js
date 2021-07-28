@@ -2,7 +2,6 @@ var myApp = angular.module('myApp', [
   'ui.router',
 ]);
 myApp.controller('appCtrl', function ($scope,$rootScope) {
-  $rootScope.currentUser = {username: 'xuejiao'}
 })
 myApp.directive('myHeader',function () {
   return {
@@ -13,7 +12,7 @@ myApp.directive('myHeader',function () {
     transclude: true,
     controller: function($scope, $state){
       $scope.dialogIsHidden = true
-      $scope.dialogInfo = {text: 'ddd'}
+      $scope.dialogInfo = {text: '确认退出系统吗？'}
       /*登录退出*/
       $scope.handleExitDialog = function () {
         $scope.dialogIsHidden = false

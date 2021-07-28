@@ -1,4 +1,89 @@
-<div ng-controller="loginCtrl">
-  登录页面
-  <a ui-sref="home" ui-sref-active="active">home</a>
+<div ng-controller="loginCtrl" class="login">
+    <div class="login-container">
+        <div class="login-title">{{loginTitle}}</div>
+        <div class="login-left">
+            <img src="./assets/images/login/main-img.png" class="login-left-img">
+        </div>
+        <div class="login-right">
+            <!--绑卡-->
+            <div class="bind-card" ng-if="loginPageType == 'bind'">
+                <div class="error" ng-if='errorFlag'>{{errorInfo}}</div>
+                <div class="input-box">
+                    <img src="./assets/images/login/account.png" class="input-icon1">
+                    <input class="input-class input-font" placeholder="请输入用户名"/>
+                </div>
+
+                <div class="input-box">
+                    <img src="./assets/images/login/passward.png" class="input-icon2">
+                    <input class="input-class2 input-font" placeholder="请输入密码" />
+                    <img src="./assets/images/login/eyes-open.png" class="eyes-icon" ng-if='isEyeFlag' ng-click='eyeClick()'>
+                    <img src="./assets/images/login/eyes-close.png" class="eyes-icon" ng-if='!isEyeFlag' ng-click='eyeClick()'>
+
+                </div>
+
+                <div class="input-box">
+                    <img src="./assets/images/login/card.png" class="input-icon3">
+                    <input class="input-class input-font" placeholder="请输入卡号" />
+                </div>
+
+                <div class="btn-box" ng-click='bindCard()'>绑卡</div>
+            </div>
+
+            <!--登录-->
+            <div class="login-type" ng-if="loginPageType == 'login'">
+                <!--刷卡-->
+                <div class="slot-card-login" ng-if="cardLoginType=='card'">
+                    <div class="slot-card-login" ng-if="cardLoginType=='card'">
+                        <div class="slot-card-title">{{slotCardTitle}}</div>
+                        <!--开发阶段模拟刷卡后场景   上线取消掉-->
+                        <img src="./assets/images/login/slot-card-img.png" class="slot-card-img" ng-click='slotCardClick()'>
+                    </div>
+
+                    <div class="login-btn-box" ng-click="slotClick()">
+                        <img src="./assets/images/login/left-arrow.png" class="login-btn-box-arrow">
+                        <div class="login-btn-box-font">使用账号登录</div>
+                    </div>
+
+                </div>
+                <!--账号密码-->
+                <div class="slot-card-login" ng-if="cardLoginType=='account'">
+                    <div class="account-login" ng-if="cardLoginType=='account'">
+                        <div class="slot-card-title">{{accountTitle}}</div>
+                        <div class="input-box login-input1">
+                            <img src="./assets/images/login/account.png" class="input-icon1">
+                            <input class="input-class input-font" placeholder="请输入用户名"/>
+                        </div>
+
+                        <div class="input-box login-input2">
+                            <img src="./assets/images/login/passward.png" class="input-icon2">
+                            <input class="input-class3 input-font" placeholder="请输入密码" />
+                            <img src="./assets/images/login/login-enter.png" class="login-enter" ng-click='loginClick()'>
+                        </div>
+                    </div>
+
+                    <div class="login-btn-box" ng-click="accountClick()">
+                        <img src="./assets/images/login/left-arrow.png" class="login-btn-box-arrow">
+                        <div class="login-btn-box-font">刷卡登录</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--绑卡提示信息-->
+        <div class="tips-box" ng-if="loginPageType == 'bindTip'">
+            <div class="tips-box-span">您的卡还未绑定账户 您是否进行绑定</div>
+            <div class="tips-box-btn-box">
+                <div class="btn-binding" ng-click='cardBingClick()'>立即绑卡</div>
+                <div class="go-back" ng-click='goBackClick()'>返回</div>
+            </div>
+
+        </div>
+
+        <!--绑卡成功提示信息-->
+        <div class="tips-success-box" ng-if="loginPageType == 'bindTipSuccess'">
+            绑定成功！<br> 即将跳转至主页
+        </div>
+
+    </div>
+
 </div>

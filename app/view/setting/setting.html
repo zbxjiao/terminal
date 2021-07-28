@@ -1,3 +1,56 @@
 <div ng-controller="settingCtrl">
-  设置页面
+    <my-header info="currentUser"></my-header>
+    <div class="setting-container">
+        <div class="setting-header">
+            <div class="header-line"></div>
+            <div class="header-title">系统设置</div>
+        </div>
+        <div class="setting-main">
+            <div class="item">
+                <div class="item-left">地&#12288;&#12288;址：</div>
+                <div class="item-right">
+                    <input class="item-input" placeholder="请输入服务器IP地址" />
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-left">端&#12288;&#12288;口：</div>
+                <div class="item-right">
+                    <input class="item-input" placeholder="请输入端口" />
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-left">超时时间：</div>
+                <div class="item-right2" style="margin-right:30px">
+                    <input class="item-input2" placeholder="请输入" />
+                    <div class="item-icon">s</div>
+                </div>
+                <div class="item-left">上报时间：</div>
+                <div class="item-right2">
+                    <input class="item-input2" placeholder="请输入" />
+                    <div class="item-icon">s</div>
+                </div>
+
+            </div>
+
+            <div class="item">
+                <div class="item-left">调试地址：</div>
+                <div class="item-right">
+                    <input class="item-input" placeholder="请输入调试地址" />
+                </div>
+            </div>
+        </div>
+
+        <div class="setting-footer">
+            <div class="footer-btn  btn1">
+                <img src="./assets/images/setting/refresh.png" class="btn-icon">
+                <div>重置</div>
+            </div>
+            <div class="footer-btn  btn2">
+                <img src="./assets/images/setting/submit.png" class="btn-icon">
+                <div>提交</div>
+            </div>
+        </div>
+    </div>
 </div>
