@@ -16,7 +16,7 @@
           <li>{{item.numberOfCopiesT}}份 / {{item.numberOfPages}}页 / {{item.colorMode ? '彩色' : '黑白'}}/{{!item.singleAndDoubleSides ? '单面' : '双面'}}</li>
           <li>{{item.createTime}}</li>
           <li>
-            <img src="./assets/images/edit@2x.png"/>
+            <img src="./assets/images/edit@2x.png" ng-click="editDialog(item)"/>
           </li>
         </ul>
         <my-page info="pageInfo"
@@ -38,4 +38,24 @@
     <span class="d_btn whiteBtn" ng-click="close()">取消</span>
     <span class="d_btn deleteBtn" ng-click="handleJobDelete()">删除</span>
   </my-dialog>
+
+  <div ng-hide="editDialogIsHidden">
+    <div id="fullbg"></div>
+    <div class="dialog">
+      <div class="d_content">
+        <div class="printEdit">
+          <ul>
+            <li>份数</li>
+            <li ng-click="minusNumber()">-</li>
+            <li>{{numberIndex}}</li>
+            <li ng-click="addNumber()">+</li>
+          </ul>
+        </div>
+      </div>
+      <p class="d_bottom">
+        <span class="d_btn whiteBtn" ng-click="close()">取消</span>
+        <span class="d_btn printBtn" ng-click="handleEdit()">确认</span>
+      </p>
+    </div>
+  </div>
 </div>

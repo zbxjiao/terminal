@@ -4,6 +4,8 @@ myApp.controller(
     $scope.pageInfo = {pageIndex: 1, pageSize:5}
     $scope.dialogIsHidden = true
     $scope.dialogInfo = {text: ''}
+    $scope.editDialogIsHidden = true
+    $scope.editObj = {}
     $scope.checkedList = [];
     $scope.list = [
       {
@@ -52,6 +54,7 @@ myApp.controller(
         createTime: '09/25 15:01:35'
       }
     ]
+    $scope.numberIndex = 1
     /**
      * 复选框
      * @param item
@@ -94,9 +97,25 @@ myApp.controller(
     }
     $scope.close = function () {
       $scope.dialogIsHidden = true
+      $scope.editDialogIsHidden = true
     }
     $scope.handleJobDelete = function () {
       console.log('删除作业')
+      $scope.dialogIsHidden = true
+    }
+    $scope.handleEdit = function () {
+      console.log('编辑',$scope.editObj)
+    }
+    $scope.editDialog = function (item) {
+      $scope.editDialogIsHidden = false
+      $scope.editObj = item
+    }
+    $scope.addNumber = function () {
+      console.log('添加')
+      $scope.numberIndex++;
+    }
+    $scope.minusNumber = function () {
+      $scope.numberIndex = $scope.numberIndex - 1 < 1 ? 1 : $scope.numberIndex - 1;
     }
   }
 );

@@ -55,10 +55,15 @@
     border: 1px solid #55B9F1;
     color: #ffffff;
 }
-/*复印按钮样式*/
+.d_bottom .copyBtn{
+    background: #727FFE;
+    border: 1px solid #727FFE;
+    color: #ffffff;
+}
+/*打印按钮样式*/
 .d_bottom .printBtn{
-    background: #5877E6;
-    border: 1px solid #5877E6;
+    background: #F7B247;
+    border: 1px solid #F7B247;
     color: #ffffff;
 }
 /*删除按钮*/
@@ -79,6 +84,8 @@
     text-align: center;
     padding-top: 43px;
     font-size:18px;
+    position: absolute;
+    width: 100%;
 }
 
 /*dialog end*/
