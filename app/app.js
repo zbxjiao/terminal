@@ -1,5 +1,7 @@
 var myApp = angular.module('myApp', [
   'ui.router',
+  'ngIdle',
+  'ngCookies',
 ]);
 myApp.controller('appCtrl', function ($scope,$rootScope) {
 })

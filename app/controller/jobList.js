@@ -1,11 +1,13 @@
 myApp.controller(
   'jobListCtrl',
-  function ($scope) {
+  function ($scope, Idle, $state) {
+    // Idle.watch();
     $scope.pageInfo = {pageIndex: 1, pageSize:5}
     $scope.dialogIsHidden = true
     $scope.dialogInfo = {text: ''}
     $scope.editDialogIsHidden = true
     $scope.editObj = {}
+    $scope.idleIsHidden = true
     $scope.checkedList = [];
     $scope.list = [
       {
@@ -102,6 +104,12 @@ myApp.controller(
       $scope.editDialogIsHidden = true
     }
     /**
+     * 长时间无操作退出
+     */
+    $scope.handleExit = function () {
+      $state.go('login')
+    }
+    /**
      * 删除确认
      */
     $scope.handleJobDelete = function () {
@@ -136,5 +144,33 @@ myApp.controller(
     $scope.minusNumber = function () {
       $scope.numberIndex = $scope.numberIndex - 1 < 1 ? 1 : $scope.numberIndex - 1;
     }
+    /**
+     * 刷新
+     */
+    $scope.handleRefresh = function () {
+    }
+    $scope.$on('IdleStart', function () {
+      console.log('IdleStart');
+      // 弹出对话框
+      $scope.idleIsHidden = false
+      $scope.dialogInfo.text = '系统检测您长时间无操作 将在15秒内退出系统！'
+    });
+
+    $scope.$on('IdleWarn', function (e, countdown) {
+      console.log('IdleWarn');
+    });
+
+    $scope.$on('IdleTimeout', function () {
+      console.log('IdleTimeout');
+      $state.go('login')
+    });
+
+    $scope.$on('IdleEnd', function () {
+      console.log('IdleEnd');
+    });
+
+    $scope.$on('Keepalive', function () {
+      console.log('Keepalive');
+    });
   }
 );

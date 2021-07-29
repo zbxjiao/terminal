@@ -26,7 +26,7 @@
     <p class="btnGroup">
       <label class="deleteBtn" ng-click="moreDel()"><img src="./assets/images/delete@2x.png" alt="">删除</label>
       <span>
-        <label class="refreshBtn"><img src="./assets/images/refresh@2x.png" alt="">刷新</label>
+        <label class="refreshBtn"><img src="./assets/images/refresh@2x.png" alt="" ng-click="handleRefresh()">刷新</label>
          <label class="printBtn"><img src="./assets/images/print@2x.png" alt="">打印</label>
       </span>
     </p>
@@ -34,6 +34,11 @@
   <my-dialog ng-hide="dialogIsHidden" info="dialogInfo">
     <span class="d_btn whiteBtn" ng-click="close()">取消</span>
     <span class="d_btn deleteBtn" ng-click="handleJobDelete()">删除</span>
+  </my-dialog>
+
+  <my-dialog ng-hide="idleIsHidden" info="dialogInfo">
+    <span class="d_btn whiteBtn" ng-click="close()">取消</span>
+    <span class="d_btn deleteBtn" ng-click="handleExit()">退出</span>
   </my-dialog>
 
   <div ng-hide="editDialogIsHidden">
